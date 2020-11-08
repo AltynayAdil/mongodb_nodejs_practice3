@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/country"><i class="fa fa-plus"></i> Добавить страну</a>  Список стран для миграции</h3>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>NameKaz</th>
+        <th>NameRus</th>
+        <th>Id</th>
+        <th>Code</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.NameKaz}}</td>
+                <td>{{this.NameRus}}</td>
+                <td>{{this.Id}}</td>
+                <td>{{this.Code}}</td>
+                <td>
+                    <a href="/country/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href="/country/delete/{{this._id}}" onclick="return confirm('Вы уверены, что хотите удалить документ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

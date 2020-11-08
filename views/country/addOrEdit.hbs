@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/country" method="post" autocomplete="off">
+    <input type="hidden" name="_id" value="{{country._id}}">
+    <div class="form-group">
+        <label>NameKuz</label>
+        <input type="text" class="form-control" name="NameKaz" placeholder="Наименование страны на казахском языке" value="{{country.NameKaz}}">
+        <div class="text-danger">
+            {{country.NameKazError}}</div>
+    </div>
+    <div class="form-group">
+        <label>NameRus</label>
+        <input type="text" class="form-control" name="NameRus" placeholder="Наименование страны на русском языке" value="{{country.NameRus}}">
+        <div class="text-danger">
+            {{country.NameRusError}}</div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-6">
+        <label>ID страны</label>
+        <input type="text" class="form-control" name="Id" placeholder="Введите Id страны" value="{{country.Id}}">
+        <div class="text-danger">
+            {{country.IdError}}</div>
+    </div>
+    <div class="form-group col-md-6">
+        <label>Код страны</label>
+        <input type="text" class="form-control" name="Code" placeholder="Введите код страны" value="{{country.Code}}">
+        <div class="text-danger">
+            {{country.CodeError}}</div>
+    </div>
+    </div>
+    <div class="form-group">
+       <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>   Добавить</button>
+        <a class="btn btn-secondary" href="/country/list"><i class="fa fa-list-alt"></i> Просмотреть список стран</a>
+    </div>
+</form>
